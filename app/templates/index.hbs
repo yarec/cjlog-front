@@ -1,9 +1,34 @@
+
 <h2 class="welcome-message">Welcome to Tapas with Ember</h2>
 <p>
   You are running in the {{env.name}} environment.
 </p>
 <ul>
-  {{#each item in content}}
+  {{#each item in colors}}
     <li>{{item}}</li>
   {{/each}}
 </ul>
+
+<div class="article-container">
+    <section class="">
+      {{#each item in arrs}}
+            <article class="article">
+                    <div class="inner">
+                        2013-10-18
+
+                        <a href="/2013/10/18/Commonly-used-windows-commands.html"> <h3> <center>windows常用命令</center> </h3> </a>
+                        <br>
+                        <p> 查看进程信息：tasklist /V
+                            查看占用８０端口的进程号：Netstat -ano|findstr "80"
+                            查看进程号为４２５２的进程信息：tasklist|findstr "4252"
+
+                            建立一个用户：net&nbsp;user uname upass /add
+                            删除一个用户：net&nbsp;user&nbsp;uname /del
+                            把用户添加到管理员：net&nbsp;localgroup&nbsp;administrators&nbsp;u ...  
+                            <a href="/2013/10/18/Commonly-used-windows-commands.html">详细内容</a>
+                        </p>
+                    </div>
+            </article>
+      {{/each}}
+    </section>
+</div>

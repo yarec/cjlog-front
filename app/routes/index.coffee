@@ -1,3 +1,4 @@
 module.exports = App.IndexRoute = Ember.Route.extend
   model: ->
-    ['red', 'yellow', 'blue']
+    'colors': ['red', 'yellow', 'blue'],
+    'arrs':   [1..10]
