@@ -15,5 +15,7 @@ folderOrder.forEach (folder) ->
     new RegExp("^#{folder}/").test(module)
   ).forEach((module) -> require(module))
 
+###
 $ ->
   $("#header").headroom();
+###
