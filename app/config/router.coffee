@@ -1,2 +1,8 @@
+module.exports = App.ApplicationAdapter = DS.RESTAdapter.extend
+    host: 'http://localhost:3000'
+
 module.exports = App.Router.map ->
-  # put your routes here
+    @resource 'posts', ->
+        @resource 'post', {path: ':post_id'}
+
+
