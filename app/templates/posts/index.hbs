@@ -1,0 +1,23 @@
+
+<div class="article-container">
+    <section class="">
+      {{#each }}
+            <article class="article">
+                    <div class="inner">
+                        2013-10-18
+
+                        <h3> <center>
+                            {{#link-to "posts.post" id}} {{name}} {{/link-to}}
+                        </center> </h3>
+
+                        <br>
+                        <p> 
+                            {{{value}}}
+                             ...  
+                            <a href="/2013/10/18/Commonly-used-windows-commands.html">详细内容</a>
+                        </p>
+                    </div>
+            </article>
+      {{/each}}
+    </section>
+</div>

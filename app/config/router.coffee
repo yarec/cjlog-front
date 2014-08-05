@@ -3,7 +3,7 @@ module.exports = App.ApplicationAdapter = DS.RESTAdapter.extend
 
 module.exports = App.Router.map ->
     @resource 'posts', ->
-        @resource 'post', {path: ':post_id'}
-        @resource 'postpage', {path: '/page/:page_id'}
+        @route 'post', {path: ':post_id'}
+        @route 'page', {path: '/page/:page_id'}
 
 

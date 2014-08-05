@@ -1,4 +1,3 @@
-<h2 class="welcome-message">Post Page</h2>
 
     <p>
       Page: 
@@ -20,7 +19,11 @@
             <article class="article">
                     <div class="inner">
                         2013-10-18
-                        <a href="/2013/10/18/Commonly-used-windows-commands.html"> <h3> <center>{{name}}</center> </h3> </a>
+
+                        <h3> <center>
+                            {{#link-to "posts.post" id}} {{name}} {{/link-to}}
+                        </center> </h3>
+
                         <br>
                         <p> 
                             {{{value}}}

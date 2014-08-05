@@ -1,4 +1,4 @@
-module.exports = App.PostpageRoute = Em.Route.extend
+module.exports = App.PostsIndexRoute = Em.Route.extend
     model: (params) ->
         meta = this.store.metadataFor("post")
         @store.find('post', {'page':params.page_id})

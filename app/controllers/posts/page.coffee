@@ -1,3 +1,4 @@
+
 # from http://jsbin.com/ucanam/5886/edit
 
 incrementPage = (amt) ->
@@ -13,7 +14,7 @@ incrementPage = (amt) ->
             newPage;
 ###
 
-module.exports = App.PostpageController = Em.ArrayController.extend
+module.exports = App.PostsPageController = Em.ArrayController.extend
   queryParams: ['sortBy', 'page', 'pageSize'],
   page: 1,
   pageSize: 10,
