@@ -1,6 +1,7 @@
 module.exports = App.Post = DS.Model.extend
     format: DS.attr 'number'
     name: DS.attr 'string'
+    desc: DS.attr 'string'
     value: DS.attr 'string'
     intm: DS.attr 'date'
     uptm: DS.attr 'date'

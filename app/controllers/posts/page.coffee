@@ -17,7 +17,7 @@ incrementPage = (amt) ->
 module.exports = App.PostsPageController = Em.ArrayController.extend
   queryParams: ['sortBy', 'page', 'pageSize'],
   page: 1,
-  pageSize: 10,
+  pageSize: 3,
 
   pages: ( ->
     meta = this.store.metadataFor("post")

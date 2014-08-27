@@ -7,7 +7,7 @@ module.exports = App.PostsPostRoute = Em.Route.extend
         console.log(typeof pid)
         console.log('-------------')
 
-        @store.find('post', 0+pid )
+        @store.find('post', 0+pid ,{t:1})
     actions:
         refresh: ->
           @model().then (data) =>

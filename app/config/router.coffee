@@ -4,6 +4,7 @@ module.exports = App.ApplicationAdapter = DS.RESTAdapter.extend
 module.exports = App.Router.map ->
     @resource 'posts', ->
         @route 'post', {path: ':post_id'}
-        @route 'page', {path: '/page/:page_id'}
+        @route 'page', {path: '/page/:page'}
+        @route 'page', {path: '/page/:page/:size'}
 
 
