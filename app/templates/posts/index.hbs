@@ -1,4 +1,57 @@
+
+<style>
+#jstree .folder { background:url('/images/file_sprite.png') right bottom no-repeat; }
+#jstree .file { background:url('/images/file_sprite.png') 0 0 no-repeat; }
+</style>
 index
+
+  <div id="jstree">
+  </div>
+
+  <button>demo button</button>
+
+<script>
+$(function () {
+
+    //$('#jstree').jstree({});
+
+        $('#jstree')
+                .jstree({
+                    'core' : {
+                        'data' : {
+                            'url' : 'http://127.0.0.1:3000/notetype',
+                            'data' : function (node) {
+                                return { 'id' : node.id };
+                            }
+                        },
+                        'themes' : {
+                            'responsive' : true,
+                            'variant' : 'small',
+                            'stripes' : true
+                        }
+                    },
+                    'sort' : function(a, b) {
+                        return this.get_type(a) === this.get_type(b) ? (this.get_text(a) > this.get_text(b) ? 1 : -1) : (this.get_type(a) >= this.get_type(b) ? 1 : -1);
+                    },
+                
+                    'types' : {
+                        'default' : { 'icon' : 'folder' },
+                        'file' : { 'valid_children' : [], 'icon' : 'file' }
+                    },
+                    'plugins' : ['state','dnd','sort','types','unique']
+                });
+
+    $('#jstree').on("changed.jstree", function (e, data) {
+      console.log(data.selected);
+    });
+    $('button').on('click', function () {
+      $('#jstree').jstree(true).select_node('child_node_1');
+      $('#jstree').jstree('select_node', 'child_node_1');
+      $.jstree.reference('#jstree').select_node('child_node_1');
+    });
+  });
+</script>
+
 <div class="article-container">
     <section class="">
       {{#each }}
