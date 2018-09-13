@@ -1,5 +1,7 @@
 # Tapas with Ember [![Build Status][travis-badge]][travis]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/yarec/cjlog-front.svg)](https://greenkeeper.io/)
+
 A [Brunch][] skeleton for rapid [Ember][] development. Including Ember
 installation scripts, environment-specific builds, generators, and
 [Ember.vim][] support.
